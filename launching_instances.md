@@ -78,7 +78,7 @@ sudo apt install nginx -y
 sudo systemctl start nginx
 ```
 
-8. Return to your AWS instance page and you will be able to locate your public IP address and launch your nginx webserver. 
+8. Return to your AWS instance page and you will be able to locate your public IP address and launch your nginx webserver.
 
 ![alt text](final.png)
 
