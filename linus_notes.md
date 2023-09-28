@@ -91,7 +91,7 @@ You can use a chmod calcultor to find the number : https://chmod-calculator.com/
 `MYNAME=Samiha` this is how a variable can be created 
 
 `export MY_NAME=Samiha` 
-`printenv `this will allow you to see your variable in the OS itself 
+`printenv `this will allow you to see your variable in the os itself 
 
 
 
