@@ -66,3 +66,4 @@ Finally, execute the following command while still in your application folder. T
 1. In AWS you need to add port range 3000 to inbound security group. 
 
 2. Paste into the IP address with the port `:3000`
+
