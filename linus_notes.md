@@ -93,7 +93,10 @@ You can use a chmod calcultor to find the number : https://chmod-calculator.com/
 `export MY_NAME=Samiha` 
 `printenv `this will allow you to see your variable in the os itself 
 
+### Copying files into EC2
+`scp -i "<filepath to .pem file>" -r app ubuntu@ec2-3-250-0-59.eu-west-1.compute.amazonaws.com>`
 
+`scp -i "C:/Users/Samiha/.ssh/tech254.pem" -r app ubuntu@ec2-34-242-237-25.eu-west-1.compute.amazonaws.com:~`
 
 
 
