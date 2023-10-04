@@ -20,3 +20,22 @@ In Nginx, the default configuration for sites is usually stored in the sites-ava
 This configuration includes settings for how Nginx should handle different websites, including server blocks (similar to virtual hosts in Apache) specifying server names, ports, and file paths.
 
 #### How do you set up a Nginx reverse proxy?
+
+#### Install nginx use the following commands:
+
+`sudo apt-get update`
+
+`sudo apt-get install nginx`
+
+`cd /etc/nginx/sites-available/`
+
+`sudo nano default`
+
+```
+proxy_pass http://<<public_IP_address>>:3000;
+proxy_set_header Host $host; 
+proxy_set_header X-Real-IP $remote_addr;
+
+```
+
+`sudo systemctl restart nginx`
