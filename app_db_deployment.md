@@ -54,6 +54,6 @@ Edit the MongoDB configuration file and change the 'bindIp' option to your serve
 
 `node app.js`
 
-Return to IP address enter `:3000/posts`
+Return to IP address enter :3000/posts
 
 
