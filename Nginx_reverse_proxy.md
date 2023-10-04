@@ -2,20 +2,21 @@
 
 #### What are ports? 
 
-A port is a communication endpoint. It's like a door through which information flows to and from a computer. Ports are identified for each protocol and address combination by a 16-bit number, commonly known as the port number.
+A port is a communication endpoint. It's like a door through which information flows to and from a computer. 
+
+Ports are identified for each protocol and address combination by a 16-bit number, commonly known as the port number.
 
 #### What is a reverse proxy? How is it different to a proxy? 
 
-**Proxy:**
-A proxy server acts as an intermediary between a client and a destination server. It receives requests from clients seeking resources from other servers and forwards those requests to the destination servers. The destination servers respond to the proxy, which, in turn, sends the response to the client.
+A **proxy** acts as an intermediary between a user and the internet. It intercepts requests and forwards them, masking the user's IP address.
 
-**Reverse Proxy:**
-A reverse proxy is similar to a regular proxy but operates in the opposite direction. It receives requests from servers seeking resources and forwards those requests to the appropriate clients. When clients respond, the reverse proxy sends the response back to the servers.
+A **reverse proxy**, on the other hand, sits between web servers and users. It handles requests from users, forwards them to web servers, then sends back the servers' responses to users. 
 
-#### Make a diagram for the above point to go with your explanation
 
 #### What is Nginx's default configuration (hint - 'sites-available' directory)
 
-Nginx's default configuration is stored in the sites-available directory. In this directory, you can find configuration files for different sites or applications hosted on the Nginx server. These configuration files contain settings such as server names, listening ports, and proxy configurations.
+In Nginx, the default configuration for sites is usually stored in the sites-available directory. 
+
+This configuration includes settings for how Nginx should handle different websites, including server blocks (similar to virtual hosts in Apache) specifying server names, ports, and file paths.
 
 #### How do you set up a Nginx reverse proxy?
