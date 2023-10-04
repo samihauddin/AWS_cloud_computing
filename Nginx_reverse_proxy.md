@@ -21,8 +21,6 @@ This configuration includes settings for how Nginx should handle different websi
 
 #### How do you set up a Nginx reverse proxy?
 
-#### Install nginx use the following commands:
-
 `sudo apt-get update`
 
 `sudo apt-get install nginx`
