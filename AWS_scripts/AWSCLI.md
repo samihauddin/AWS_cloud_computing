@@ -1,4 +1,4 @@
-## S3 Buckets using AWS CLI
+### S3 Buckets using AWS CLI
 
 Step 1: Launch EC2 <br>
 Step 2: Connect instance on Git Bash
@@ -20,6 +20,7 @@ Step 4: Enter the following credentials:
 - Default output format [None]: `json`
 
 Step 5: Check connection 
+
 `aws s3 ls`
 
 ### Creating a bucket
