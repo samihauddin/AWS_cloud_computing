@@ -146,9 +146,18 @@ Value: <enter any name>
 ### How to stop an Auto Scaling Group
 
 1. Delete the load balancer
+
+![alt text](del1.png)
+
 2. Delete the target group
+
+![alt text](del2.png)
+
 3. Delete the Auto Scaling Group
 
-#### Diagram displaying worse to better solutions in preventing disasters 
+![alt text](del3.png)
+
+
+### Diagram displaying worse to better solutions in preventing disasters 
 
 ![alt text](im22.png)
