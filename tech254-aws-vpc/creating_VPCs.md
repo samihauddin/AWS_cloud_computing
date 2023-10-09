@@ -80,7 +80,7 @@ Fill in the details of your public subnet
 5. Then press `Create subnet`
 
 
-6. You have now successfully created 2 subnets within your VPC 
+6. You have now successfully created 2 subnets within your VPC. 
 
 ![alt text](v10.png)
 
