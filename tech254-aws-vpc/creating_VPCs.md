@@ -84,3 +84,140 @@ Fill in the details of your public subnet
 
 ![alt text](v10.png)
 
+### Step 4: Creating an Internet Gateway
+
+1. Navigate to`Internet Gateway`
+
+![alt text](ig1.png)
+
+2. Select `Create Internet Gateway` 
+
+![alt text](ig2.png)
+
+3. Create a Name tag e.g. `tech254-samiha-2tier-first-vpc-ig`
+
+![alt text](ig3.png)
+
+4. Then select `Create internet gateway `
+
+5. Your internet gateway has now been created, now **we must attach it to the VPC**.
+
+- Click *Actions* > `Attach a VPC`
+
+![alt text](attach.png)
+
+6. Search for your VPC and select `Attach to Internet Gateway`
+
+![alt text](attach2.png)
+
+### Step 4: Creating a Route table
+
+1. Navigate to Route Tables
+
+![alt text](rt.png)
+
+2. Create Route Tables
+- Create a Name e.g `public-rt`
+- Then select your VPC from the dropdown
+
+![alt text](rt1.png)
+
+4. Then select `Create Route Table`
+
+You have now successfully created route table.
+
+### Step 4: Creating Association
+
+5. Navigate to `Subnet Association`
+
+![alt text](subnet.png)
+
+6. Click `Edit Subnet Association`
+
+7. Check the `puclic-subnet` option
+
+![alt text](check.png)
+
+![alt text](s1.png)
+
+8. You can now test your pathway by navigating to your resource map in Internet gateway.
+
+![alt text](testing.png)
+
+### Step 4: Creating your Virtual Machines
+
+#### Creating your Database Instance
+
+1. Navigate to AMIs in EC2. 
+2. Search for your AMI and select this
+5. Then select `Launch Instance from AMI`
+
+Launching your instance
+
+1. Name = `tech254-samiha-db-test-first-vpc`
+5. Key pair = tech254
+6. Network settings > Edit settings 
+7. VPC > select your VPC 
+![alt text](vp1.png)
+8. Subnet: Select `private-subnet`
+9. Select `disable`
+
+10. Create security Group
+![alt text](csg.png)
+![alt text](sg.png)
+11. Fill in MongoDB security using the following:
+![alt text](mongo.png)
+
+12. Then review the configurations and select `Launch Instance`
+
+#### Creating your App Instance
+
+1. Navigate to AMIs in EC2. 
+2. Search for your AMI that contains the app. 
+5. Then select `Launch Instance from AMI`
+
+Launching your instance
+
+1. Name = `tech254-samiha-app-test-first-vpc`
+5. Key pair = tech254
+6. Network settings > Edit settings 
+7. VPC > select your VPC 
+![alt text](vp1.png)
+8. Subnet: Select `public-subnet`
+9. Select `enable`
+
+![alt text](enable.png)
+
+10. Create security Group
+![alt text](create.png)
+11. Create Security Rules as the following:
+![alt text](sg3.png)
+
+12. Then navigate to `User Data`
+- Then enter the following commands 
+
+```
+#!/bin/bash
+
+export DB_HOST=mongodb://<ENTER PRIVATE IP ADDRESS>:27017/posts
+
+cd /home/ubuntu/repo/app
+#sudo systemctl restart nginx
+npm install
+node seeds/seed.js
+
+sudo npm install pm2 -g
+pm2 kill
+pm2 start app.js
+```
+![alt text](ud1.png)
+
+3. Select `Launch Instance`
+4. Navigate to you app instance and copy and paste the public IP address. This should load the app page. 
+
+![alt text](app.png)
+
+5. In the url after the IP address enter `/posts`
+- This should navigate you to the data page 
+
+![alt text](posts.png)
