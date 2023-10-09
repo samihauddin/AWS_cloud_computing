@@ -110,7 +110,7 @@ Fill in the details of your public subnet
 
 ![alt text](attach2.png)
 
-### Step 4: Creating a Route table
+### Step 5: Creating a Route table
 
 1. Navigate to Route Tables
 
@@ -126,7 +126,7 @@ Fill in the details of your public subnet
 
 You have now successfully created route table.
 
-### Step 4: Creating Association
+### Step 6: Creating Association
 
 5. Navigate to `Subnet Association`
 
@@ -144,7 +144,7 @@ You have now successfully created route table.
 
 ![alt text](testing.png)
 
-### Step 4: Creating your Virtual Machines
+### Step 7: Creating your Virtual Machines
 
 #### Creating your Database Instance
 
