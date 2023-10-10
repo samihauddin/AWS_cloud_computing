@@ -165,7 +165,9 @@ Launching your instance
 5. Key pair = tech254
 6. Network settings > Edit settings 
 7. VPC > select your VPC 
+
 ![alt text](vp1.png)
+
 8. Subnet: Select `private-subnet`
 9. Select `disable`
 
