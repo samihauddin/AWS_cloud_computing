@@ -140,6 +140,13 @@ You have now successfully created route table.
 
 ![alt text](s1.png)
 
+### Connecting your internet gateway to your route table
+- `Edit Routes`
+- `Add Route`
+- `Enter destination: 0.0.0.0./0`
+- `Target:` select you internet gateway
+- Select `create`
+
 8. You can now test your pathway by navigating to your resource map in Internet gateway.
 
 ![alt text](testing.png)
@@ -199,14 +206,14 @@ Launching your instance
 ```
 #!/bin/bash
 
-export DB_HOST=mongodb://<ENTER PRIVATE IP ADDRESS>:27017/posts
+export DB_HOST=mongodb://private_IP_of_DB_instance:27017/posts
 
 cd /home/ubuntu/repo/app
-#sudo systemctl restart nginx
+sudo systemctl restart nginx
 npm install
 node seeds/seed.js
-
 sudo npm install pm2 -g
+
 pm2 kill
 pm2 start app.js
 ```
